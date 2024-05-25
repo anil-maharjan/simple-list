@@ -18,6 +18,86 @@ const DATA_SOURCE = [{
   id: 2,
   name: 'Banana',
 },
+{
+    id: 3,
+    name: 'Orange',
+  },
+  {
+    id: 4,
+    name: 'Grapes',
+  },
+  {
+    id: 5,
+    name: 'Pineapple',
+  },
+  {
+    id: 6,
+    name: 'Strawberry',
+  },
+  {
+    id: 7,
+    name: 'Watermelon',
+  },
+  {
+    id: 8,
+    name: 'Kiwi',
+  },
+  {
+    id: 9,
+    name: 'Mango',
+  },
+  {
+    id: 10,
+    name: 'Peach',
+  },
+  {
+    id: 11,
+    name: 'Pear',
+  },
+  {
+    id: 12,
+    name: 'Plum',
+  },
+  {
+    id: 13,
+    name: 'Cherry',
+  },
+  {
+    id: 14,
+    name: 'Apricot',
+  },
+  {
+    id: 15,
+    name: 'Lemon',
+  },
+  {
+    id: 16,
+    name: 'Lime',
+  },
+  {
+    id: 17,
+    name: 'Coconut',
+  },
+  {
+    id: 18,
+    name: 'Avocado',
+  },
+  {
+    id: 19,
+    name: 'Raspberry',
+  },
+  {
+    id: 20,
+    name: 'Blackberry',
+  },
+  {
+    id: 21,
+    name: 'Blueberry',
+  },
+  {
+    id: 22,
+    name: 'Cranberry',
+  }
 ]
 
 
@@ -79,11 +159,13 @@ const SimpleList = ({ data = DATA_SOURCE }: AppProps) => {
           </TouchableOpacity>
         </View>
         <FlatList
+          style={styles.p20}
           data={dataSource}
           keyboardShouldPersistTaps="always"
           keyExtractor={item => item.id.toString()}
           renderItem={renderItem}
           ListEmptyComponent={renderEmpty}
+          showsVerticalScrollIndicator={false}
         />
       </SafeAreaView>
     );
@@ -105,7 +187,7 @@ const styles = StyleSheet.create({
     color: 'black'
   },
   container: {
-    padding: 20,
+    paddingBottom: 100,
   },
   searchContainer: {
     borderBottomWidth: 1,
@@ -116,7 +198,8 @@ const styles = StyleSheet.create({
   flexRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 30,
+    backgroundColor: '#E1E5EE',
+    padding: 20,
   },
   btnDesign: {
     borderWidth: 1,
@@ -130,6 +213,9 @@ const styles = StyleSheet.create({
   },
   lightText: {
     color: '#496A81',
+  },
+  p20: {
+    padding: 20,
   }
 })
 
